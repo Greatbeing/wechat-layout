@@ -1,6 +1,6 @@
 # wechat-layout
 
-> 微信公众号图文排版设计器 — AI Skill for SOLO
+> 微信公众号图文排版设计器 — AI Agent Skill
 
 [English](#english) | [中文](#中文)
 
@@ -10,7 +10,9 @@
 
 ### 简介
 
-`wechat-layout` 是一个为 [SOLO](https://solo.ai) 平台设计的 AI Skill，能够自动生成精美的微信公众号图文排版。提供 **10 种预设视觉风格**，输出使用**内联 CSS** 的 HTML，可直接复制粘贴到微信公众号编辑器。
+`wechat-layout` 是一个通用的 AI Agent Skill，能够自动生成精美的微信公众号图文排版。提供 **10 种预设视觉风格**，输出使用**内联 CSS** 的 HTML，可直接复制粘贴到微信公众号编辑器。
+
+适用于任何支持 Skill/Plugin 机制的 AI Agent 平台（如 SOLO、Coze、GPTs、Dify 等）。
 
 ### 10 种预设风格
 
@@ -33,12 +35,19 @@
 
 ### 安装
 
-1. 将 `.trae/skills/wechat-layout/` 目录复制到你的 SOLO 工作区的 `.trae/skills/` 下
-2. 重启 SOLO，Skill 即可自动加载
+将 `skill/SKILL.md` 的内容导入到你的 AI Agent 平台：
+
+| 平台 | 导入方式 |
+|------|---------|
+| **SOLO** | 放入 `.trae/skills/wechat-layout/SKILL.md` |
+| **Coze** | 创建 Plugin，将 SKILL.md 内容填入 Prompt |
+| **GPTs** | 将 SKILL.md 内容粘贴到 Instructions |
+| **Dify** | 创建工具，将 SKILL.md 作为 Prompt 模板 |
+| **其他** | 将 SKILL.md 作为 System Prompt 的一部分 |
 
 ### 使用
 
-在 SOLO 中输入以下任意关键词即可触发：
+在 AI Agent 中输入以下任意关键词即可触发：
 
 > 微信公众号排版、公众号排版、公众号美化、排版设计、文章模板、微信推文、推文排版、公众号图文、头图设计 …
 
@@ -63,7 +72,9 @@
 
 ### Overview
 
-`wechat-layout` is an AI Skill for the [SOLO](https://solo.ai) platform that automatically generates beautifully designed WeChat public account article layouts. It offers **10 preset visual styles** and outputs **inline-CSS HTML** that can be directly pasted into the WeChat editor.
+`wechat-layout` is a universal AI Agent Skill that automatically generates beautifully designed WeChat public account article layouts. It offers **10 preset visual styles** and outputs **inline-CSS HTML** that can be directly pasted into the WeChat editor.
+
+Compatible with any AI Agent platform that supports Skill/Plugin mechanisms (SOLO, Coze, GPTs, Dify, etc.).
 
 ### 10 Preset Styles
 
@@ -86,12 +97,19 @@ Each style includes 12+ complete components: Header Banner, Opening Quote, Headi
 
 ### Installation
 
-1. Copy the `.trae/skills/wechat-layout/` directory to your SOLO workspace under `.trae/skills/`
-2. Restart SOLO — the Skill will be automatically loaded
+Import `skill/SKILL.md` into your AI Agent platform:
+
+| Platform | How to Import |
+|----------|--------------|
+| **SOLO** | Place in `.trae/skills/wechat-layout/SKILL.md` |
+| **Coze** | Create a Plugin, paste SKILL.md content into Prompt |
+| **GPTs** | Paste SKILL.md content into Instructions |
+| **Dify** | Create a Tool, use SKILL.md as Prompt template |
+| **Others** | Use SKILL.md as part of your System Prompt |
 
 ### Usage
 
-Type any of these keywords in SOLO to trigger the Skill:
+Type any of these keywords in your AI Agent to trigger the Skill:
 
 > WeChat article layout, 公众号排版, WeChat post template, 排版设计, article template …
 
