@@ -2,7 +2,7 @@
 
 > 微信公众号图文排版设计器 — AI Agent Skill
 
-[English](#english) | [中文](#中文)
+[🎨 在线预览](https://greatbeing.github.io/wechat-layout/) · [English](#english) | [中文](#中文)
 
 ---
 

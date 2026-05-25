@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wechat-layout - 微信公众号图文排版设计器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .btn-primary { background: #fff; color: #764ba2; }
+        .btn-secondary { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .section-title p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .styles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .style-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .style-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+        .style-preview {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+        }
+        .style-info {
+            padding: 20px;
+        }
+        .style-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .style-info p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        .s1 { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .s2 { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+        .s3 { background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb); }
+        .s4 { background: linear-gradient(135deg, #2c3e50, #d4af37); }
+        .s5 { background: linear-gradient(135deg, #f5e6d3, #e8d4c4); }
+        .s6 { background: linear-gradient(135deg, #0f0c29, #302b63); }
+        .s7 { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+        .s8 { background: linear-gradient(135deg, #000, #333); }
+        .s9 { background: linear-gradient(135deg, #134e5e, #71b280); }
+        .s10 { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        .feature h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .feature p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .install-section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .install-section h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        .install-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .install-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.5;
+        }
+        .step-content code {
+            background: #e8eaf6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #5c6bc0;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            margin-bottom: 60px;
+            color: #fff;
+        }
+        .cta h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .cta p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: #fff;
+            color: #764ba2;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #aaa;
+            font-size: 13px;
+        }
+        footer a { color: #764ba2; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-badge">AI Agent Skill</div>
+        <h1>wechat-layout</h1>
+        <p>微信公众号图文排版设计器，10 种预设视觉风格，一键生成可直接粘贴到公众号编辑器的精美排版</p>
+        <div class="hero-buttons">
+            <a href="examples/公众号排版组件库.html" class="btn btn-primary" target="_blank">
+                🎨 在线预览
+            </a>
+            <a href="https://github.com/Greatbeing/wechat-layout" class="btn btn-secondary" target="_blank">
+                ⭐ GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>10 种预设风格</h2>
+            <p>覆盖主流公众号内容场景，每种风格包含 12+ 完整组件</p>
+        </div>
+
+        <div class="styles-grid">
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s1">💼</div>
+                <div class="style-info">
+                    <h3>极简商务</h3>
+                    <p>简洁专业，适合企业号、职场、分析报告</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s2">🌿</div>
+                <div class="style-info">
+                    <h3>清新文艺</h3>
+                    <p>柔和优雅，适合生活方式、阅读类内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s3">🚀</div>
+                <div class="style-info">
+                    <h3>活力创意</h3>
+                    <p>色彩鲜明，适合年轻品牌、创意内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s4">👑</div>
+                <div class="style-info">
+                    <h3>高端质感</h3>
+                    <p>沉稳大气，适合奢侈品、高端品牌</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s5">📜</div>
+                <div class="style-info">
+                    <h3>复古优雅</h3>
+                    <p>温暖复古，适合怀旧主题、文化内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s6">🔮</div>
+                <div class="style-info">
+                    <h3>科技未来</h3>
+                    <p>炫酷现代，适合科技、AI、互联网内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s7">🌸</div>
+                <div class="style-info">
+                    <h3>温柔治愈</h3>
+                    <p>温暖柔和，适合情感、心理、治愈内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s8">📰</div>
+                <div class="style-info">
+                    <h3>杂志编辑</h3>
+                    <p>专业排版，适合时尚、生活方式内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s9">🌍</div>
+                <div class="style-info">
+                    <h3>自然生态</h3>
+                    <p>清新自然，适合环保、户外、健康内容</p>
+                </div>
+            </a>
+            <a href="examples/公众号排版组件库.html" class="style-card" target="_blank">
+                <div class="style-preview s10">🎀</div>
+                <div class="style-info">
+                    <h3>甜美少女</h3>
+                    <p>粉嫩可爱，适合美妆、穿搭、少女内容</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-title">
+            <h2>核心特性</h2>
+            <p>专为微信公众号编辑器深度优化</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">✅</div>
+                <h3>编辑器兼容</h3>
+                <p>基于微信编辑器实际兼容性测试，使用 table + 内联 CSS 确保最大兼容性</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🧩</div>
+                <h3>12+ 组件模块</h3>
+                <p>头图、标题、正文、引用、多图、时间轴、问答、数据卡片、作者卡片等</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <h3>一键复制</h3>
+                <p>点击按钮即可复制 HTML 代码，直接粘贴到公众号编辑器使用</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <h3>AI 驱动</h3>
+                <p>通用 AI Agent Skill，支持 SOLO、Coze、GPTs、Dify 等主流平台</p>
+            </div>
+        </div>
+
+        <div class="install-section">
+            <h2>快速开始</h2>
+            <div class="install-steps">
+                <div class="install-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>获取 Skill 文件</h4>
+                        <p>下载 <code>skill/SKILL.md</code> 文件</p>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>导入到你的 AI Agent</h4>
+                        <p>SOLO → <code>.trae/skills/</code> · Coze/GPTs → 粘贴到 Prompt · Dify → 工具模板</p>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>输入关键词触发</h4>
+                        <p>说「公众号排版」或「帮我设计微信推文」，AI 自动生成排版</p>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>复制粘贴到微信</h4>
+                        <p>点击「复制代码」，在公众号编辑器中 Ctrl+V 粘贴即可</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>立即体验</h2>
+            <p>点击下方按钮，在线预览全部 10 种排版风格</p>
+            <a href="examples/公众号排版组件库.html" class="btn-white" target="_blank">
+                🎨 打开在线预览
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>wechat-layout &copy; 2024 · <a href="https://github.com/Greatbeing/wechat-layout" target="_blank">GitHub</a> · MIT License</p>
+    </footer>
+</body>
+</html>
