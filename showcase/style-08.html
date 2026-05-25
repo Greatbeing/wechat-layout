@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格8: 杂志编辑</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .style-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        .style-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .style-desc {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-header">
+            <div class="style-number">8</div>
+            <div class="style-title">杂志编辑</div>
+            <div class="style-desc">适合时尚美妆、潮流内容，设计感强，视觉冲击力</div>
+        </div>
+        <div class="content">
+            
+            <div class="style-header">
+                <div class="style-number">8</div>
+                <div class="style-info">
+                    <h2>杂志编辑</h2>
+                    <p>适合时尚、生活方式内容，专业排版，杂志级视觉体验</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(8)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-8">
+                <!-- 头图Banner -->
+                <div style="background: #fff; padding: 0; margin-bottom: 30px; border-bottom: 3px solid #000;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #ddd;">
+                        <span style="font-size: 11px; color: #666; letter-spacing: 3px; text-transform: uppercase;">Vol. 128 | December 2024</span>
+                        <span style="font-size: 24px; color: #000; font-weight: 700; letter-spacing: 8px; text-transform: uppercase;">VOGUE</span>
+                        <span style="font-size: 11px; color: #666; letter-spacing: 3px; text-transform: uppercase;">Fashion & Lifestyle</span>
+                    </div>
+                    <div style="padding: 40px 0; text-align: center;">
+                        <h1 style="font-size: 42px; color: #000; font-weight: 700; margin: 0; line-height: 1.1; letter-spacing: -1px;">THE ART OF<br>LIVING WELL</h1>
+                        <p style="font-size: 14px; color: #666; margin-top: 20px; letter-spacing: 2px; text-transform: uppercase;">精致生活的艺术</p>
+                    </div>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #f8f8f8; padding: 30px; margin-bottom: 30px; border-left: 5px solid #000;">
+                    <p style="font-size: 16px; color: #333; line-height: 1.8; margin: 0; font-style: italic;">
+                        "时尚易逝，风格永存。真正的精致，源于对生活的热爱与对细节的执着。"
+                    </p>
+                    <p style="font-size: 12px; color: #666; margin-top: 15px;">— COCO CHANEL</p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 40px 0;">
+                    <div style="display: flex; align-items: baseline; gap: 15px; border-bottom: 2px solid #000; padding-bottom: 15px;">
+                        <span style="font-size: 48px; color: #000; font-weight: 700; line-height: 1;">01</span>
+                        <h2 style="font-size: 24px; color: #000; font-weight: 600; margin: 0; text-transform: uppercase; letter-spacing: 2px;">Seasonal Trends</h2>
+                    </div>
+                    <p style="font-size: 14px; color: #666; margin-top: 10px;">本季流行趋势解读</p>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 30px 0;">
+                    <h3 style="font-size: 18px; color: #000; font-weight: 600; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Minimalist Elegance</h3>
+                    <div style="width: 40px; height: 2px; background: #000;"></div>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 25px 0;">
+                    <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0 0 20px 0; text-indent: 2em;">
+                        极简主义在本季强势回归，但不再是简单的黑白灰。设计师们通过材质的创新与剪裁的巧思，为简约注入了新的生命力。丝绸的光泽、羊毛的质感、皮革的硬朗，在极简的框架下碰撞出独特的火花。
+                    </p>
+                    <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0; text-indent: 2em;">
+                        真正的极简，是懂得取舍的智慧。留下最经典的单品，用配饰点亮整体造型。一条丝巾、一副耳环，往往能成为点睛之笔。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: #000; padding: 40px; margin: 35px 0; text-align: center;">
+                    <p style="font-size: 20px; color: #fff; line-height: 1.6; margin: 0; font-weight: 300; letter-spacing: 1px;">
+                        "LESS IS MORE"
+                    </p>
+                    <p style="font-size: 12px; color: #999; margin-top: 15px; letter-spacing: 3px; text-transform: uppercase;">Mies Van Der Rohe</p>
+                </div>
+
+                <!-- 多图排版 - 杂志风格 -->
+                <div style="margin: 35px 0;">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
+                        <div>
+                            <img src="../assets/1469334031218-e382a71b716b.jpg" style="width: 100%; height: 350px; object-fit: cover;">
+                            <p style="font-size: 11px; color: #666; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px;">Photo: Annie Leibovitz</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <img src="../assets/1515886657613-9f3515b0c78f.jpg" style="width: 100%; height: 167px; object-fit: cover;">
+                            <img src="../assets/1509631179647-0177331693ae.jpg" style="width: 100%; height: 167px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; color: #000; margin-top: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Editorial: The New Minimalism</p>
+                </div>
+
+                <!-- 时间轴 -->
+                <div style="margin: 40px 0;">
+                    <h3 style="font-size: 16px; color: #000; font-weight: 600; margin: 0 0 25px 0; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Fashion Timeline</h3>
+                    <div style="display: flex; justify-content: space-between; text-align: center;">
+                        <div style="flex: 1; padding: 20px; border-right: 1px solid #eee;">
+                            <div style="font-size: 24px; font-weight: 700; color: #000; margin-bottom: 10px;">1920s</div>
+                            <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Flapper Style</div>
+                        </div>
+                        <div style="flex: 1; padding: 20px; border-right: 1px solid #eee;">
+                            <div style="font-size: 24px; font-weight: 700; color: #000; margin-bottom: 10px;">1960s</div>
+                            <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Mod Fashion</div>
+                        </div>
+                        <div style="flex: 1; padding: 20px; border-right: 1px solid #eee;">
+                            <div style="font-size: 24px; font-weight: 700; color: #000; margin-bottom: 10px;">1990s</div>
+                            <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Minimalism</div>
+                        </div>
+                        <div style="flex: 1; padding: 20px;">
+                            <div style="font-size: 24px; font-weight: 700; color: #000; margin-bottom: 10px;">2024</div>
+                            <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Neo-Minimal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A问答 -->
+                <div style="margin: 40px 0;">
+                    <h3 style="font-size: 16px; color: #000; font-weight: 600; margin: 0 0 25px 0; text-transform: uppercase; letter-spacing: 2px;">Style Q&A</h3>
+                    
+                    <div style="border-top: 1px solid #ddd; padding: 25px 0;">
+                        <div style="font-size: 14px; color: #000; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Q: 如何打造胶囊衣橱？</div>
+                        <div style="font-size: 14px; color: #555; line-height: 1.9;">A: 选择30-40件高品质单品，确保每件都能与其他单品搭配。基础色占70%，点缀色占30%。</div>
+                    </div>
+                    
+                    <div style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 25px 0;">
+                        <div style="font-size: 14px; color: #000; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Q: 投资单品推荐？</div>
+                        <div style="font-size: 14px; color: #555; line-height: 1.9;">A: 经典风衣、白衬衫、小黑裙、优质手袋——这些 timeless pieces 值得投资。</div>
+                    </div>
+                </div>
+
+                <!-- 数据卡片 -->
+                <div style="margin: 35px 0;">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="flex: 1; background: #000; padding: 30px; text-align: center;">
+                            <div style="font-size: 36px; color: #fff; font-weight: 700;">40</div>
+                            <div style="font-size: 11px; color: #999; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;">Capsule Items</div>
+                        </div>
+                        <div style="flex: 1; background: #f8f8f8; border: 2px solid #000; padding: 30px; text-align: center;">
+                            <div style="font-size: 36px; color: #000; font-weight: 700;">70%</div>
+                            <div style="font-size: 11px; color: #666; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;">Basic Colors</div>
+                        </div>
+                        <div style="flex: 1; background: #000; padding: 30px; text-align: center;">
+                            <div style="font-size: 36px; color: #fff; font-weight: 700;">∞</div>
+                            <div style="font-size: 11px; color: #999; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;">Possibilities</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作者卡片 -->
+                <div style="background: #f8f8f8; padding: 30px; margin: 40px 0; display: flex; align-items: center; gap: 25px; border-top: 3px solid #000;">
+                    <img src="../assets/1534528741775-53994a69daeb.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #000;">
+                    <div style="flex: 1;">
+                        <div style="font-size: 14px; color: #000; font-weight: 600; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">Emma Style</div>
+                        <div style="font-size: 11px; color: #666; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Fashion Editor | Style Consultant</div>
+                        <div style="font-size: 13px; color: #555; line-height: 1.7;">十年时尚编辑经验，相信每个人都值得拥有属于自己的风格。</div>
+                    </div>
+                </div>
+
+                <!-- 底部引导 -->
+                <div style="background: #000; padding: 40px; text-align: center; margin-top: 40px;">
+                    <p style="font-size: 14px; color: #fff; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 3px;">Stay Chic</p>
+                    <div style="display: flex; justify-content: center; gap: 30px;">
+                        <span style="font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 2px;">Share</span>
+                        <span style="font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 2px;">Save</span>
+                        <span style="font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 2px;">Comment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风格9: 自然生态 -->
+        
+        </div>
+    </div>
+</body>
+</html>

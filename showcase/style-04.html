@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格4: 高端质感</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .style-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        .style-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .style-desc {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-header">
+            <div class="style-number">4</div>
+            <div class="style-title">高端质感</div>
+            <div class="style-desc">适合奢侈品、高端服务，精致典雅，彰显品质</div>
+        </div>
+        <div class="content">
+            
+            <div class="style-header">
+                <div class="style-number">4</div>
+                <div class="style-info">
+                    <h2>高端质感</h2>
+                    <p>适合奢侈品、高端品牌，沉稳大气，彰显品质与格调</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(4)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-4">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%); padding: 60px 40px; text-align: center; margin-bottom: 40px; position: relative; border-bottom: 3px solid #d4af37;">
+                    <div style="position: absolute; top: 20px; left: 40px; font-size: 11px; color: #d4af37; letter-spacing: 6px; text-transform: uppercase;">Luxury Collection</div>
+                    <div style="position: absolute; top: 20px; right: 40px; font-size: 11px; color: #888; letter-spacing: 2px;">EST. 2024</div>
+                    <div style="margin: 30px 0;">
+                        <div style="width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 0 auto 30px;"></div>
+                        <h1 style="font-size: 32px; color: #fff; font-weight: 300; letter-spacing: 8px; margin: 0; text-transform: uppercase;">臻品鉴赏</h1>
+                        <div style="width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 30px auto 0;"></div>
+                    </div>
+                    <p style="font-size: 13px; color: #aaa; letter-spacing: 3px; margin-top: 25px;">卓越品质 ·  timeless elegance</p>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #fafafa; border: 1px solid #e0e0e0; padding: 30px; margin-bottom: 40px;">
+                    <p style="font-size: 15px; color: #666; line-height: 2; margin: 0; text-align: center; font-style: italic; letter-spacing: 1px;">
+                        "真正的奢华，不在于价格的标签，而在于细节的极致与时间的沉淀。"
+                    </p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 40px 0; text-align: center;">
+                    <h2 style="font-size: 24px; color: #2c3e50; font-weight: 400; letter-spacing: 4px; margin: 0; text-transform: uppercase;">工艺传承</h2>
+                    <div style="width: 40px; height: 2px; background: #d4af37; margin: 15px auto;"></div>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 30px 0;">
+                    <h3 style="font-size: 16px; color: #2c3e50; font-weight: 500; margin: 0 0 20px 0; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">
+                        <span style="color: #d4af37;">01</span> &nbsp;匠心独运
+                    </h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 25px 0;">
+                    <p style="font-size: 15px; color: #444; line-height: 2.2; text-align: justify; margin: 0 0 20px 0; text-indent: 2em;">
+                        每一件臻品的诞生，都凝聚着匠人们数十年的心血与智慧。从选材到成品，历经上百道工序的精心打磨，只为呈现最完美的品质。我们相信，真正的美，需要时间的沉淀与匠心的雕琢。
+                    </p>
+                    <p style="font-size: 15px; color: #444; line-height: 2.2; text-align: justify; margin: 0; text-indent: 2em;">
+                        在这个快节奏的时代，我们依然坚持慢工出细活的理念。因为唯有如此，才能创造出经得起时间考验的经典之作。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: #2c3e50; padding: 40px; margin: 35px 0; position: relative;">
+                    <div style="position: absolute; top: 20px; left: 30px; font-size: 60px; color: #d4af37; opacity: 0.3; font-family: Georgia, serif;">"</div>
+                    <p style="font-size: 18px; color: #fff; line-height: 1.8; margin: 0; text-align: center; font-weight: 300; letter-spacing: 1px;">
+                        品质不是偶然，而是持续专注的结果。
+                    </p>
+                    <div style="position: absolute; bottom: 10px; right: 30px; font-size: 60px; color: #d4af37; opacity: 0.3; font-family: Georgia, serif;">"</div>
+                </div>
+
+                <!-- 多图排版 - 双图 -->
+                <div style="margin: 35px 0;">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="flex: 1;">
+                            <img src="../assets/1441986300917-64674bd600d8.jpg" style="width: 100%; height: 280px; object-fit: cover;">
+                            <p style="font-size: 12px; color: #888; margin: 15px 0 0 0; text-align: center; letter-spacing: 2px; text-transform: uppercase;">Craftsmanship</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="../assets/1492707892479-7bc8d5a4ee93.jpg" style="width: 100%; height: 280px; object-fit: cover;">
+                            <p style="font-size: 12px; color: #888; margin: 15px 0 0 0; text-align: center; letter-spacing: 2px; text-transform: uppercase;">Elegance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 时间轴 -->
+                <div style="margin: 40px 0;">
+                    <h3 style="font-size: 16px; color: #2c3e50; font-weight: 500; margin: 0 0 30px 0; letter-spacing: 2px; text-transform: uppercase; text-align: center;">
+                        <span style="color: #d4af37;">—</span> &nbsp;品牌历程&nbsp; <span style="color: #d4af37;">—</span>
+                    </h3>
+                    <div style="position: relative; padding: 0 40px;">
+                        <div style="display: flex; justify-content: space-between; text-align: center;">
+                            <div style="flex: 1;">
+                                <div style="font-size: 14px; color: #d4af37; font-weight: 600; margin-bottom: 10px; letter-spacing: 2px;">1924</div>
+                                <div style="width: 12px; height: 12px; background: #d4af37; border-radius: 50%; margin: 0 auto 15px;"></div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">品牌创立<br>传承之始</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 14px; color: #d4af37; font-weight: 600; margin-bottom: 10px; letter-spacing: 2px;">1960</div>
+                                <div style="width: 12px; height: 12px; background: #d4af37; border-radius: 50%; margin: 0 auto 15px;"></div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">工艺革新<br>享誉国际</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 14px; color: #d4af37; font-weight: 600; margin-bottom: 10px; letter-spacing: 2px;">2024</div>
+                                <div style="width: 12px; height: 12px; background: #d4af37; border-radius: 50%; margin: 0 auto 15px;"></div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">百年传承<br>经典永续</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A问答 -->
+                <div style="margin: 40px 0;">
+                    <h3 style="font-size: 16px; color: #2c3e50; font-weight: 500; margin: 0 0 25px 0; letter-spacing: 2px; text-transform: uppercase;">
+                        <span style="color: #d4af37;">—</span> &nbsp;臻品问答&nbsp; <span style="color: #d4af37;">—</span>
+                    </h3>
+                    
+                    <div style="background: #fafafa; border-left: 3px solid #d4af37; padding: 25px; margin-bottom: 20px;">
+                        <div style="font-size: 14px; color: #2c3e50; font-weight: 600; margin-bottom: 12px; letter-spacing: 1px;">Q：如何保养臻品？</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.9;">A：建议定期专业护理，避免阳光直射与潮湿环境。每一件臻品都配有专属保养手册。</div>
+                    </div>
+                    
+                    <div style="background: #fafafa; border-left: 3px solid #d4af37; padding: 25px;">
+                        <div style="font-size: 14px; color: #2c3e50; font-weight: 600; margin-bottom: 12px; letter-spacing: 1px;">Q：是否提供定制服务？</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.9;">A：我们提供专属定制服务，由专业设计师一对一沟通，打造独一无二的专属臻品。</div>
+                    </div>
+                </div>
+
+                <!-- 数据卡片 -->
+                <div style="margin: 35px 0;">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="flex: 1; background: #2c3e50; padding: 35px 20px; text-align: center; border-bottom: 3px solid #d4af37;">
+                            <div style="font-size: 36px; color: #d4af37; font-weight: 300; letter-spacing: 2px;">100</div>
+                            <div style="font-size: 11px; color: #aaa; margin-top: 10px; letter-spacing: 2px; text-transform: uppercase;">Years of Heritage</div>
+                        </div>
+                        <div style="flex: 1; background: #2c3e50; padding: 35px 20px; text-align: center; border-bottom: 3px solid #d4af37;">
+                            <div style="font-size: 36px; color: #d4af37; font-weight: 300; letter-spacing: 2px;">50+</div>
+                            <div style="font-size: 11px; color: #aaa; margin-top: 10px; letter-spacing: 2px; text-transform: uppercase;">Master Craftsmen</div>
+                        </div>
+                        <div style="flex: 1; background: #2c3e50; padding: 35px 20px; text-align: center; border-bottom: 3px solid #d4af37;">
+                            <div style="font-size: 36px; color: #d4af37; font-weight: 300; letter-spacing: 2px;">200+</div>
+                            <div style="font-size: 11px; color: #aaa; margin-top: 10px; letter-spacing: 2px; text-transform: uppercase;">Global Boutiques</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作者卡片 -->
+                <div style="background: #fafafa; border: 1px solid #e0e0e0; padding: 35px; margin: 40px 0; display: flex; align-items: center; gap: 30px;">
+                    <img src="../assets/1560250097-0b93528c311a.jpg" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid #d4af37;">
+                    <div style="flex: 1;">
+                        <div style="font-size: 16px; color: #2c3e50; font-weight: 500; margin-bottom: 8px; letter-spacing: 2px;">ALEXANDRE CHEN</div>
+                        <div style="font-size: 12px; color: #d4af37; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase;">Creative Director</div>
+                        <div style="font-size: 13px; color: #666; line-height: 1.8;">二十余年奢侈品行业经验，致力于将传统工艺与现代美学完美融合。</div>
+                    </div>
+                </div>
+
+                <!-- 底部引导 -->
+                <div style="background: #1a1a1a; padding: 50px; text-align: center; margin-top: 40px; border-top: 3px solid #d4af37;">
+                    <p style="font-size: 14px; color: #888; margin: 0 0 25px 0; letter-spacing: 3px; text-transform: uppercase;">Discover More</p>
+                    <div style="display: flex; justify-content: center; gap: 40px;">
+                        <span style="font-size: 20px; color: #d4af37;">◆</span>
+                        <span style="font-size: 20px; color: #d4af37;">◆</span>
+                        <span style="font-size: 20px; color: #d4af37;">◆</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风格5: 复古优雅 -->
+        
+        </div>
+    </div>
+</body>
+</html>

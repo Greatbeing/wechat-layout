@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格5: 复古优雅</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .style-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        .style-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .style-desc {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-header">
+            <div class="style-number">5</div>
+            <div class="style-title">复古优雅</div>
+            <div class="style-desc">适合文化历史、艺术内容，古典韵味，气质独特</div>
+        </div>
+        <div class="content">
+            
+            <div class="style-header">
+                <div class="style-number">5</div>
+                <div class="style-info">
+                    <h2>复古优雅</h2>
+                    <p>适合怀旧主题、文化内容，温暖复古，充满时光韵味</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(5)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-5">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(180deg, #f5e6d3 0%, #e8d4c4 100%); padding: 50px 30px; border-radius: 4px; text-align: center; margin-bottom: 30px; border: 8px solid #fff; box-shadow: 0 4px 20px rgba(139,69,19,0.15); position: relative;">
+                    <div style="position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border: 1px solid #d2691e; opacity: 0.3;"></div>
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b4513; letter-spacing: 8px; margin-bottom: 20px;">旧 时 光</div>
+                    <h1 style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 34px; color: #5d3a1a; font-weight: normal; margin: 0; line-height: 1.4;">岁月如歌，<br>往事如烟</h1>
+                    <div style="margin-top: 25px;">
+                        <span style="display: inline-block; width: 30px; height: 1px; background: #d2691e; vertical-align: middle;"></span>
+                        <span style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #8b4513; margin: 0 15px;">一九八零年代回忆录</span>
+                        <span style="display: inline-block; width: 30px; height: 1px; background: #d2691e; vertical-align: middle;"></span>
+                    </div>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #faf6f1; padding: 25px 30px; border-radius: 4px; margin-bottom: 30px; border-left: 4px solid #d2691e;">
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; line-height: 2; margin: 0;">
+                        "那些年，时光很慢，车马邮件都慢，一生只够爱一个人。"
+                    </p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 35px 0; text-align: center;">
+                    <div style="display: inline-block; position: relative;">
+                        <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 1px; background: #d2691e;"></div>
+                        <h2 style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 26px; color: #5d3a1a; font-weight: normal; margin: 0; padding: 0 20px;">第一章：老街记忆</h2>
+                        <div style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 1px; background: #d2691e;"></div>
+                    </div>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 25px 0;">
+                    <h3 style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 18px; color: #8b4513; font-weight: normal; margin: 0 0 15px 0; padding-left: 20px; border-left: 3px solid #d2691e;">巷口的杂货铺</h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 20px 0;">
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; line-height: 2.4; text-align: justify; margin: 0 0 18px 0; text-indent: 2em;">
+                        记忆中，巷口总有一家杂货铺。木质的货架上摆满了各种瓶瓶罐罐，阳光透过玻璃窗洒进来，在地板上投下斑驳的光影。老板娘总是笑眯眯的，用泛黄的纸包着糖果，系上一根细麻绳。
+                    </p>
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; line-height: 2.4; text-align: justify; margin: 0; text-indent: 2em;">
+                        那时候，一分钱可以买两颗水果糖，五分钱能买一根冰棍。孩子们攥着皱巴巴的零钱，眼睛亮晶晶地盯着玻璃罐里的糖果，那是童年最甜蜜的记忆。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: #f5e6d3; padding: 35px; border-radius: 4px; margin: 30px 0; position: relative; text-align: center;">
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 48px; color: #d2691e; opacity: 0.3; line-height: 1; margin-bottom: 10px;">❝</div>
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 17px; color: #5d3a1a; line-height: 2; margin: 0;">
+                        旧时光是个美人，<br>让人忍不住频频回首。
+                    </p>
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 48px; color: #d2691e; opacity: 0.3; line-height: 1; margin-top: 10px;">❞</div>
+                </div>
+
+                <!-- 多图排版 - 三图 -->
+                <div style="margin: 30px 0;">
+                    <div style="display: flex; gap: 12px;">
+                        <div style="flex: 1; background: #fff; padding: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transform: rotate(-2deg);">
+                            <img src="../assets/1513519245088-0e12902e35ca.jpg" style="width: 100%; height: 140px; object-fit: cover; filter: sepia(30%);">
+                        </div>
+                        <div style="flex: 1; background: #fff; padding: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            <img src="../assets/1505664194779-8beaceb93744.jpg" style="width: 100%; height: 140px; object-fit: cover; filter: sepia(30%);">
+                        </div>
+                        <div style="flex: 1; background: #fff; padding: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transform: rotate(2deg);">
+                            <img src="../assets/1516979187457-637abb4f9353.jpg" style="width: 100%; height: 140px; object-fit: cover; filter: sepia(30%);">
+                        </div>
+                    </div>
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b4513; margin: 15px 0 0 0; text-align: center;">泛黄的老照片，记录着逝去的时光</p>
+                </div>
+
+                <!-- 时间轴 -->
+                <div style="margin: 35px 0;">
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <h3 style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 20px; color: #5d3a1a; font-weight: normal; margin: 0;">岁月留痕</h3>
+                    </div>
+                    <div style="position: relative; padding: 0 20px;">
+                        <div style="position: absolute; left: 80px; top: 0; bottom: 0; width: 1px; background: #d2691e; opacity: 0.5;"></div>
+                        
+                        <div style="display: flex; margin-bottom: 25px; position: relative;">
+                            <div style="width: 70px; text-align: right; padding-right: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #8b4513;">1985</div>
+                            </div>
+                            <div style="width: 10px; height: 10px; background: #d2691e; border-radius: 50%; margin-top: 5px; flex-shrink: 0; position: relative; z-index: 1;"></div>
+                            <div style="flex: 1; padding-left: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; margin-bottom: 5px;">童年时光</div>
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b7355; line-height: 1.8;">在胡同里追逐嬉戏，夏天的夜晚躺在竹床上数星星</div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; margin-bottom: 25px; position: relative;">
+                            <div style="width: 70px; text-align: right; padding-right: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #8b4513;">1995</div>
+                            </div>
+                            <div style="width: 10px; height: 10px; background: #d2691e; border-radius: 50%; margin-top: 5px; flex-shrink: 0; position: relative; z-index: 1;"></div>
+                            <div style="flex: 1; padding-left: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; margin-bottom: 5px;">青春岁月</div>
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b7355; line-height: 1.8;">骑着单车穿过林荫道，书包里装着满满的梦想</div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; position: relative;">
+                            <div style="width: 70px; text-align: right; padding-right: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #8b4513;">2005</div>
+                            </div>
+                            <div style="width: 10px; height: 10px; background: #d2691e; border-radius: 50%; margin-top: 5px; flex-shrink: 0; position: relative; z-index: 1;"></div>
+                            <div style="flex: 1; padding-left: 20px;">
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #5d3a1a; margin-bottom: 5px;">离别时刻</div>
+                                <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b7355; line-height: 1.8;">老街拆迁，那些熟悉的身影渐渐散去</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A问答 -->
+                <div style="margin: 30px 0;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h3 style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 20px; color: #5d3a1a; font-weight: normal; margin: 0;">读者来信</h3>
+                    </div>
+                    
+                    <div style="background: #faf6f1; border-radius: 4px; padding: 25px; margin-bottom: 15px; border: 1px solid #e8d4c4;">
+                        <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 15px; color: #8b4513; margin-bottom: 12px;">问：如何保存老照片？</div>
+                        <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #5d3a1a; line-height: 2; padding-left: 20px; border-left: 2px solid #d2691e;">
+                            答：建议将老照片扫描数字化保存，同时用无酸相册袋存放原件，避免阳光直射和潮湿环境。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作者卡片 -->
+                <div style="background: #f5e6d3; padding: 30px; border-radius: 4px; margin: 35px 0; text-align: center; border: 1px solid #e8d4c4;">
+                    <img src="../assets/1544005313-94ddf0286df2.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #d2691e; padding: 3px; background: #fff; margin-bottom: 15px;">
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 18px; color: #5d3a1a; margin-bottom: 8px;">陈念旧</div>
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 13px; color: #8b4513; margin-bottom: 12px;">怀旧专栏作家 | 时光收藏者</div>
+                    <div style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 14px; color: #5d3a1a; line-height: 2; max-width: 400px; margin: 0 auto;">
+                        用文字记录流逝的岁月，<br>愿每一个故事都能被温柔以待。
+                    </div>
+                </div>
+
+                <!-- 底部引导 -->
+                <div style="background: #5d3a1a; padding: 35px; text-align: center; margin-top: 35px;">
+                    <p style="font-family: 'STKaiti', 'KaiTi', serif; font-size: 16px; color: #f5e6d3; margin: 0 0 20px 0;">愿时光不老，我们不散</p>
+                    <div style="display: flex; justify-content: center; gap: 30px; align-items: center;">
+                        <span style="font-size: 14px; color: #d2691e;">点赞</span>
+                        <span style="font-size: 14px; color: #d2691e;">留言</span>
+                        <span style="font-size: 14px; color: #d2691e;">分享</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风格6: 科技未来 -->
+        
+        </div>
+    </div>
+</body>
+</html>

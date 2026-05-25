@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格1: 极简商务</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 375px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .style-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(233, 69, 96, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        .style-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .style-desc {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-header">
+            <div class="style-number">1</div>
+            <div class="style-title">极简商务</div>
+            <div class="style-desc">适合企业号、职场内容，简洁专业，信息传达高效</div>
+        </div>
+        <div class="content">
+            <!-- 头图Banner -->
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 30px; border-radius: 0; text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 12px; color: #e94560; letter-spacing: 8px; margin-bottom: 15px; text-transform: uppercase;">BUSINESS INSIGHTS</div>
+                <h1 style="font-size: 28px; color: #ffffff; font-weight: 300; letter-spacing: 2px; margin: 0; line-height: 1.4;">深度商业洞察</h1>
+                <div style="width: 60px; height: 2px; background: #e94560; margin: 20px auto;"></div>
+                <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0;">每周精选 · 行业趋势 · 战略分析</p>
+            </div>
+
+            <!-- 一级标题 -->
+            <div style="margin: 30px 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 4px; height: 28px; background: #e94560;"></div>
+                    <h2 style="font-size: 22px; color: #1a1a2e; font-weight: 600; margin: 0;">市场趋势分析</h2>
+                </div>
+                <p style="font-size: 14px; color: #666; margin: 10px 0 0 16px; line-height: 1.8;">本文深入剖析当前市场环境下的关键变化因素，为企业提供战略决策参考。</p>
+            </div>
+
+            <!-- 二级标题 -->
+            <div style="margin: 25px 20px;">
+                <h3 style="font-size: 17px; color: #16213e; font-weight: 500; margin: 0 0 12px 0; padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;">▍ 核心观点</h3>
+            </div>
+
+            <!-- 正文段落 -->
+            <div style="margin: 20px;">
+                <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0 0 16px 0; text-indent: 2em;">
+                    在数字化转型的浪潮中，企业面临着前所未有的机遇与挑战。传统商业模式正在被颠覆，新兴技术不断涌现，消费者行为也在发生深刻变化。
+                </p>
+                <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0; text-indent: 2em;">
+                    本报告基于对500家企业的深度调研，结合行业数据和专家访谈，为您呈现最全面的市场洞察。
+                </p>
+            </div>
+
+            <!-- 引用块 -->
+            <div style="background: #f8f9fa; border-left: 4px solid #e94560; padding: 20px 25px; margin: 25px 20px;">
+                <p style="font-size: 15px; color: #1a1a2e; line-height: 1.8; margin: 0; font-style: italic;">
+                    "未来的竞争不是产品的竞争，而是商业模式的竞争。能够持续创新的企业，将在新一轮洗牌中脱颖而出。"
+                </p>
+                <p style="font-size: 13px; color: #888; margin: 12px 0 0 0; text-align: right;">— 麦肯锡全球研究院</p>
+            </div>
+
+            <!-- 多图排版 - 双图 -->
+            <div style="margin: 25px 20px;">
+                <div style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <img src="../assets/1460925895917-afdab827c52f.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;">
+                        <p style="font-size: 12px; color: #888; margin: 8px 0 0 0; text-align: center;">图1：市场增长趋势</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <img src="../assets/1551288049-bebda4e38f71.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;">
+                        <p style="font-size: 12px; color: #888; margin: 8px 0 0 0; text-align: center;">图2：用户行为分析</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间轴 -->
+            <div style="margin: 30px 20px;">
+                <h3 style="font-size: 17px; color: #16213e; font-weight: 500; margin: 0 0 20px 0;">▍ 发展历程</h3>
+                <div style="position: relative; padding-left: 30px;">
+                    <div style="position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #e0e0e0;"></div>
+                    
+                    <div style="position: relative; margin-bottom: 25px;">
+                        <div style="position: absolute; left: -26px; top: 2px; width: 12px; height: 12px; background: #e94560; border-radius: 50%;"></div>
+                        <div style="font-size: 14px; color: #e94560; font-weight: 600; margin-bottom: 5px;">2024年 Q1</div>
+                        <div style="font-size: 14px; color: #333; line-height: 1.6;">启动数字化转型战略，完成核心业务系统升级</div>
+                    </div>
+                    
+                    <div style="position: relative; margin-bottom: 25px;">
+                        <div style="position: absolute; left: -26px; top: 2px; width: 12px; height: 12px; background: #16213e; border-radius: 50%;"></div>
+                        <div style="font-size: 14px; color: #16213e; font-weight: 600; margin-bottom: 5px;">2024年 Q2</div>
+                        <div style="font-size: 14px; color: #333; line-height: 1.6;">推出新一代产品矩阵，市场份额提升15%</div>
+                    </div>
+                    
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -26px; top: 2px; width: 12px; height: 12px; background: #0f3460; border-radius: 50%;"></div>
+                        <div style="font-size: 14px; color: #0f3460; font-weight: 600; margin-bottom: 5px;">2024年 Q3</div>
+                        <div style="font-size: 14px; color: #333; line-height: 1.6;">完成B轮融资，估值突破10亿美元</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q&A问答 -->
+            <div style="margin: 30px 20px;">
+                <h3 style="font-size: 17px; color: #16213e; font-weight: 500; margin: 0 0 20px 0;">▍ 常见问题</h3>
+                
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 15px;">
+                    <div style="font-size: 15px; color: #e94560; font-weight: 600; margin-bottom: 10px;">Q：如何评估数字化转型的ROI？</div>
+                    <div style="font-size: 14px; color: #555; line-height: 1.8;">A：建议从效率提升、成本降低、收入增长三个维度建立评估体系，通常转型周期为12-18个月可见明显成效。</div>
+                </div>
+                
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+                    <div style="font-size: 15px; color: #e94560; font-weight: 600; margin-bottom: 10px;">Q：中小企业如何起步？</div>
+                    <div style="font-size: 14px; color: #555; line-height: 1.8;">A：建议从业务流程数字化开始，优先解决痛点问题，再逐步扩展至全链路数字化。</div>
+                </div>
+            </div>
+
+            <!-- 数据卡片 -->
+            <div style="margin: 25px 20px;">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 100px; background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 32px; color: #fff; font-weight: 700;">85%</div>
+                        <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 5px;">效率提升</div>
+                    </div>
+                    <div style="flex: 1; min-width: 100px; background: linear-gradient(135deg, #16213e, #0f3460); padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 32px; color: #fff; font-weight: 700;">3.2x</div>
+                        <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 5px;">ROI增长</div>
+                    </div>
+                    <div style="flex: 1; min-width: 100px; background: linear-gradient(135deg, #0f3460, #e94560); padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 32px; color: #fff; font-weight: 700;">500+</div>
+                        <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 5px;">成功案例</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作者卡片 -->
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 20px; display: flex; align-items: center; gap: 20px;">
+                <img src="../assets/1472099645785-5658abf4ff4e.jpg" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover;">
+                <div style="flex: 1;">
+                    <div style="font-size: 16px; color: #1a1a2e; font-weight: 600; margin-bottom: 5px;">张明远</div>
+                    <div style="font-size: 13px; color: #e94560; margin-bottom: 8px;">资深商业分析师 | 10年行业经验</div>
+                    <div style="font-size: 13px; color: #666; line-height: 1.6;">专注于企业数字化转型研究，服务过100+知名企业，擅长战略规划与执行落地。</div>
+                </div>
+            </div>
+
+            <!-- 延伸阅读 -->
+            <div style="margin: 25px 20px;">
+                <h3 style="font-size: 16px; color: #16213e; font-weight: 500; margin: 0 0 15px 0;">📖 延伸阅读</h3>
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px 20px; margin-bottom: 10px;">
+                    <a href="#" style="font-size: 14px; color: #1a1a2e; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>《2024年数字化转型白皮书》</span>
+                        <span style="color: #e94560;">→</span>
+                    </a>
+                </div>
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px 20px;">
+                    <a href="#" style="font-size: 14px; color: #1a1a2e; text-decoration: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>《企业创新方法论》</span>
+                        <span style="color: #e94560;">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 底部引导 -->
+            <div style="background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 30px; border-radius: 8px; text-align: center; margin: 30px 20px;">
+                <p style="font-size: 16px; color: #fff; margin: 0 0 15px 0;">觉得有帮助？分享给更多朋友</p>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <span style="font-size: 24px;">👍</span>
+                    <span style="font-size: 24px;">💬</span>
+                    <span style="font-size: 24px;">⭐</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
