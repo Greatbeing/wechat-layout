@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格9: 自然生态</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 677px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 100;
+        }
+        .nav h1 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .nav-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        .nav-btn:hover { transform: translateY(-2px); }
+        .nav-btn.active { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+        .nav-btn[data-style="1"] { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; }
+        .nav-btn[data-style="2"] { background: linear-gradient(135deg, #81c784, #4caf50); color: #fff; }
+        .nav-btn[data-style="3"] { background: linear-gradient(135deg, #ff6b6b, #feca57); color: #fff; }
+        .nav-btn[data-style="4"] { background: linear-gradient(135deg, #2c3e50, #d4af37); color: #fff; }
+        .nav-btn[data-style="5"] { background: linear-gradient(135deg, #8b4513, #d2691e); color: #fff; }
+        .nav-btn[data-style="6"] { background: linear-gradient(135deg, #0f0c29, #302b63); color: #00d4ff; }
+        .nav-btn[data-style="7"] { background: linear-gradient(135deg, #fdcb6e, #e17055); color: #fff; }
+        .nav-btn[data-style="8"] { background: linear-gradient(135deg, #2d3436, #636e72); color: #fff; }
+        .nav-btn[data-style="9"] { background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; }
+        .nav-btn[data-style="10"] { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #e17055; }
+
+        .style-section-fix {
+            display: none;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+        .style-section-fix { display: block; }
+        .style-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #eee;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .style-info h2 { font-size: 22px; margin-bottom: 5px; }
+        .style-info p { font-size: 14px; color: #888; }
+
+        .copy-btn {
+            margin-left: auto;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .copy-btn:hover { background: #555; transform: translateY(-2px); }
+
+        .preview-box {
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafafa;
+        }
+
+        .style-1 .style-number { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .style-1 .style-info h2 { color: #1a1a2e; }
+        .style-2 .style-number { background: linear-gradient(135deg, #81c784, #4caf50); }
+        .style-2 .style-info h2 { color: #2e7d32; }
+        .style-3 .style-number { background: linear-gradient(135deg, #ff6b6b, #feca57); }
+        .style-3 .style-info h2 { color: #e74c3c; }
+        .style-4 .style-number { background: linear-gradient(135deg, #2c3e50, #d4af37); }
+        .style-4 .style-info h2 { color: #2c3e50; }
+        .style-5 .style-number { background: linear-gradient(135deg, #8b4513, #d2691e); }
+        .style-5 .style-info h2 { color: #8b4513; }
+        .style-6 .style-number { background: linear-gradient(135deg, #0f0c29, #302b63); }
+        .style-6 .style-info h2 { color: #302b63; }
+        .style-7 .style-number { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+        .style-7 .style-info h2 { color: #d63031; }
+        .style-8 .style-number { background: linear-gradient(135deg, #2d3436, #636e72); }
+        .style-8 .style-info h2 { color: #2d3436; }
+        .style-9 .style-number { background: linear-gradient(135deg, #134e5e, #71b280); }
+        .style-9 .style-info h2 { color: #134e5e; }
+        .style-10 .style-number { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #e17055; }
+        .style-10 .style-info h2 { color: #e17055; }
+
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+        }
+        .usage-guide {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+        .usage-guide h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .usage-guide ol {
+            padding-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+        .usage-guide li {
+            margin-bottom: 10px;
+        }
+    
+        /* 强制显示所有内容 */
+        .style-section { display: block !important; }
+        .copy-btn { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-section style-9" id="style-9">
+            
+            <div class="style-header">
+                <div class="style-number">9</div>
+                <div class="style-info">
+                    <h2>自然生态</h2>
+                    <p>适合环保、户外、健康内容，清新自然，传递绿色理念</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(9)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-9">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(135deg, #134e5e 0%, #71b280 100%); padding: 50px 30px; border-radius: 0; text-align: center; margin-bottom: 30px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                    <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
+                    <div style="font-size: 14px; color: rgba(255,255,255,0.8); letter-spacing: 6px; margin-bottom: 20px;">🌿 ECO LIFESTYLE</div>
+                    <h1 style="font-size: 32px; color: #fff; font-weight: 400; margin: 0; line-height: 1.3;">回归自然<br>拥抱绿色生活</h1>
+                    <div style="margin-top: 25px;">
+                        <span style="display: inline-block; background: rgba(255,255,255,0.2); color: #fff; padding: 10px 25px; border-radius: 25px; font-size: 13px; letter-spacing: 2px;">🌍 可持续 · 有机 · 环保</span>
+                    </div>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #f0f7f4; border-left: 4px solid #71b280; padding: 25px 30px; margin-bottom: 30px;">
+                    <p style="font-size: 15px; color: #134e5e; line-height: 2; margin: 0;">
+                        "地球不是我们从祖先那里继承的，而是向子孙借来的。每一个小小的环保行动，都是对未来的负责。"
+                    </p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 35px 0;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #134e5e, #71b280); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🌱</div>
+                        <h2 style="font-size: 24px; color: #134e5e; font-weight: 600; margin: 0;">零废弃生活指南</h2>
+                    </div>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 25px 0;">
+                    <h3 style="font-size: 17px; color: #71b280; font-weight: 600; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 20px;">♻️</span>
+                        <span>从减塑开始</span>
+                    </h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; color: #444; line-height: 2.2; text-align: justify; margin: 0 0 18px 0; text-indent: 2em;">
+                        塑料污染是当今世界面临的最严峻环境挑战之一。每年有超过800万吨塑料流入海洋，威胁着无数海洋生物的生存。改变，可以从一个环保袋、一个水杯开始。
+                    </p>
+                    <p style="font-size: 15px; color: #444; line-height: 2.2; text-align: justify; margin: 0; text-indent: 2em;">
+                        零废弃不是一蹴而就的目标，而是一个渐进的过程。从5R原则出发：Refuse（拒绝）、Reduce（减少）、Reuse（重复使用）、Recycle（回收）、Rot（堆肥），让环保成为生活的一部分。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: linear-gradient(135deg, #134e5e, #71b280); padding: 35px; border-radius: 16px; margin: 30px 0; text-align: center;">
+                    <p style="font-size: 17px; color: #fff; line-height: 1.9; margin: 0;">
+                        "我们没有拯救地球的选择，<br>地球不需要我们拯救，<br>需要拯救的是人类自己。"
+                    </p>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 15px;">— 大卫·阿滕伯勒</p>
+                </div>
+
+                <!-- 多图排版 - 三图 -->
+                <div style="margin: 30px 0;">
+                    <div style="display: flex; gap: 12px;">
+                        <div style="flex: 1;">
+                            <img src="http://localhost:8088/assets/new-09-eco.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px;">
+                            <p style="font-size: 13px; color: #71b280; margin: 10px 0 0 0; text-align: center; font-weight: 500;">🌿 有机农场</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="http://localhost:8088/assets/1542601906990-b4d3fb778b09.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px;">
+                            <p style="font-size: 13px; color: #71b280; margin: 10px 0 0 0; text-align: center; font-weight: 500;">♻️ 垃圾分类</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="http://localhost:8088/assets/1470058869958-2a77ade41c02.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px;">
+                            <p style="font-size: 13px; color: #71b280; margin: 10px 0 0 0; text-align: center; font-weight: 500;">🌳 森林保护</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 时间轴 -->
+                <div style="margin: 35px 0;">
+                    <h3 style="font-size: 18px; color: #134e5e; font-weight: 600; margin: 0 0 25px 0; text-align: center;">🌎 环保行动日历</h3>
+                    <div style="position: relative; padding: 0 20px;">
+                        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #134e5e, #71b280); transform: translateX(-50%);"></div>
+                        
+                        <div style="display: flex; margin-bottom: 30px; align-items: center;">
+                            <div style="flex: 1; text-align: right; padding-right: 30px;">
+                                <div style="font-size: 15px; color: #134e5e; font-weight: 600; margin-bottom: 5px;">周一：无肉日</div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">尝试素食，减少碳足迹</div>
+                            </div>
+                            <div style="width: 16px; height: 16px; background: #134e5e; border-radius: 50%; flex-shrink: 0; position: relative; z-index: 1; border: 3px solid #fff;"></div>
+                            <div style="flex: 1; padding-left: 30px;"></div>
+                        </div>
+                        
+                        <div style="display: flex; margin-bottom: 30px; align-items: center;">
+                            <div style="flex: 1; padding-right: 30px;"></div>
+                            <div style="width: 16px; height: 16px; background: #71b280; border-radius: 50%; flex-shrink: 0; position: relative; z-index: 1; border: 3px solid #fff;"></div>
+                            <div style="flex: 1; padding-left: 30px;">
+                                <div style="font-size: 15px; color: #134e5e; font-weight: 600; margin-bottom: 5px;">周三：无塑日</div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">自带购物袋和水杯</div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center;">
+                            <div style="flex: 1; text-align: right; padding-right: 30px;">
+                                <div style="font-size: 15px; color: #134e5e; font-weight: 600; margin-bottom: 5px;">周末：自然日</div>
+                                <div style="font-size: 13px; color: #666; line-height: 1.6;">走进大自然，参与环保活动</div>
+                            </div>
+                            <div style="width: 16px; height: 16px; background: #134e5e; border-radius: 50%; flex-shrink: 0; position: relative; z-index: 1; border: 3px solid #fff;"></div>
+                            <div style="flex: 1; padding-left: 30px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A问答 -->
+                <div style="margin: 30px 0;">
+                    <h3 style="font-size: 18px; color: #134e5e; font-weight: 600; margin: 0 0 20px 0; text-align: center;">💚 环保问答</h3>
+                    
+                    <div style="background: #f0f7f4; border-radius: 12px; padding: 25px; margin-bottom: 15px;">
+                        <div style="font-size: 15px; color: #71b280; font-weight: 600; margin-bottom: 12px;">Q：如何开始零废弃生活？</div>
+                        <div style="font-size: 14px; color: #555; line-height: 1.9;">A：从最容易的改变开始：自带购物袋、使用可重复水杯、拒绝一次性餐具。小改变累积大影响。</div>
+                    </div>
+                    
+                    <div style="background: #f0f7f4; border-radius: 12px; padding: 25px;">
+                        <div style="font-size: 15px; color: #71b280; font-weight: 600; margin-bottom: 12px;">Q：环保产品真的更贵吗？</div>
+                        <div style="font-size: 14px; color: #555; line-height: 1.9;">A：长期来看，可重复使用的产品更经济。而且，地球的健康是无价的。</div>
+                    </div>
+                </div>
+
+                <!-- 数据卡片 -->
+                <div style="margin: 25px 0;">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 120px; background: linear-gradient(135deg, #134e5e, #1a5f6e); padding: 25px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; color: #fff; font-weight: 700;">8M</div>
+                            <div style="font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 8px;">吨塑料/年入海</div>
+                        </div>
+                        <div style="flex: 1; min-width: 120px; background: linear-gradient(135deg, #1a5f6e, #71b280); padding: 25px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; color: #fff; font-weight: 700;">30%</div>
+                            <div style="font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 8px;">碳排放可减少</div>
+                        </div>
+                        <div style="flex: 1; min-width: 120px; background: linear-gradient(135deg, #71b280, #8bc34a); padding: 25px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; color: #fff; font-weight: 700;">1</div>
+                            <div style="font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 8px;">个地球</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作者卡片 -->
+                <div style="background: linear-gradient(135deg, #f0f7f4, #e8f5e9); padding: 30px; border-radius: 16px; margin: 35px 0; display: flex; align-items: center; gap: 20px;">
+                    <img src="http://localhost:8088/assets/1507003211169-0a1dd7228f2d.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #71b280;">
+                    <div style="flex: 1;">
+                        <div style="font-size: 18px; color: #134e5e; font-weight: 600; margin-bottom: 5px;">绿色行者 🌿</div>
+                        <div style="font-size: 13px; color: #71b280; margin-bottom: 10px;">环保博主 | 可持续生活倡导者</div>
+                        <div style="font-size: 14px; color: #555; line-height: 1.7;">践行零废弃生活3年，相信每个人的小改变都能成就地球的大不同。</div>
+                    </div>
+                </div>
+
+                <!-- 底部引导 -->
+                <div style="background: linear-gradient(135deg, #134e5e, #71b280); padding: 35px; border-radius: 0; text-align: center; margin-top: 35px;">
+                    <p style="font-size: 16px; color: #fff; margin: 0 0 20px 0;">🌍 保护地球，从我做起</p>
+                    <div style="display: flex; justify-content: center; gap: 30px; align-items: center;">
+                        <span style="font-size: 28px;">🌱</span>
+                        <span style="font-size: 28px;">💚</span>
+                        <span style="font-size: 28px;">🌍</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风格10: 甜美少女 -->
+        
+        </div>
+    </div>
+</body>
+</html>

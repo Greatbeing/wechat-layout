@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格1: 极简商务</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #fff;
+            padding: 20px;
+            max-width: 677px;
+            margin: 0 auto;
+        }
+        .style-header {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        .style-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .style-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        .content {
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="style-header">
+        <div class="style-number">1</div>
+        <div class="style-title">极简商务</div>
+        <div class="style-desc">适合企业号、职场内容，简洁专业，信息传达高效</div>
+    </div>
+    <div class="content">
+        
+            <div class="style-header">
+                <div class="style-number">1</div>
+                <div class="style-info">
+                    <h2>极简商务</h2>
+                    <p>适合企业号、职场内容，简洁专业，信息传达高效</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(1)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-1">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 30px; border-radius: 0; text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 12px; color: #e94560; letter-spacing: 8px; margin-bottom: 15px; text-transform: uppercase;">BUSINESS INSIGHTS</div>
+                    <h1 style="font-size: 28px; color: #ffffff; font-weight: 300; letter-spacing: 2px; margin: 0; line-height: 1.4;">深度商业洞察</h1>
+                    <div style="width: 60px; height: 2px; background: #e94560; margin: 20px auto;"></div>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0;">每周精选 · 行业趋势 · 战略分析</p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 30px 0;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 4px; height: 28px; background: #e94560;"></div>
+                        <h2 style="font-size: 22px; color: #1a1a2e; font-weight: 600; margin: 0;">市场趋势分析</h2>
+                    </div>
+                    <p style="font-size: 14px; color: #666; margin: 10px 0 0 16px; line-height: 1.8;">本文深入剖析当前市场环境下的关键变化因素，为企业提供战略决策参考。</p>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 25px 0;">
+                    <h3 style="font-size: 17px; color: #16213e; font-weight: 500; margin: 0 0 12px 0; padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;">▍ 核心观点</h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0 0 16px 0; text-indent: 2em;">
+                        在数字化转型的浪潮中，企业面临着前所未有的机遇与挑战。传统商业模式正在被颠覆，新兴技术不断涌现，消费者行为也在发生深刻变化。
+                    </p>
+                    <p style="font-size: 15px; color: #333; line-height: 2; text-align: justify; margin: 0; text-indent: 2em;">
+                        本报告基于对500家企业的深度调研，结合行业数据和专家访谈，为您呈现最全面的市场洞察。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: #f8f9fa; border-left: 4px solid #e94560; padding: 20px 25px; margin: 25px 0;">
+                    <p style="font-size: 15px; color: #1a1a2e; line-height: 1.8; margin: 0; font-style: italic;">
+                        "未来的竞争不是产品的竞争，而是商业模式的竞争。能够持续创新的企业，将在新一轮洗牌中脱颖而出。"
+                    </p>
+                    <p style="font-size: 13px; color: #888; margin: 12px 0 0 0; text-align: right;">— 麦肯锡全球研究院</p>
+                </div>
+
+                <!-- 多图排版 - 双图 -->
+                <div style="margin: 25px 0;">
+                    <div style="display: flex; gap: 15px;">
+                        <div style="flex: 1;">
+                            <img src="../assets/new-01-business.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;">
+                            <p style="font-size: 12px; color: #888; margin: 8px 0 0 0; text-align: center;">图1：市场增长趋势</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="../assets/1460925895917-afdab827c52f.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;">
+                            <p style="font-size: 12px; color: #888; margin: 8px 0 0 0; text-align: center;">图2：用户行为分析</p>
+                        
+    </div>
+</body>
+</html>

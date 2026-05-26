@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格7: 温柔治愈</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        .phone-frame {
+            max-width: 677px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 100;
+        }
+        .nav h1 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .nav-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        .nav-btn:hover { transform: translateY(-2px); }
+        .nav-btn.active { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+        .nav-btn[data-style="1"] { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; }
+        .nav-btn[data-style="2"] { background: linear-gradient(135deg, #81c784, #4caf50); color: #fff; }
+        .nav-btn[data-style="3"] { background: linear-gradient(135deg, #ff6b6b, #feca57); color: #fff; }
+        .nav-btn[data-style="4"] { background: linear-gradient(135deg, #2c3e50, #d4af37); color: #fff; }
+        .nav-btn[data-style="5"] { background: linear-gradient(135deg, #8b4513, #d2691e); color: #fff; }
+        .nav-btn[data-style="6"] { background: linear-gradient(135deg, #0f0c29, #302b63); color: #00d4ff; }
+        .nav-btn[data-style="7"] { background: linear-gradient(135deg, #fdcb6e, #e17055); color: #fff; }
+        .nav-btn[data-style="8"] { background: linear-gradient(135deg, #2d3436, #636e72); color: #fff; }
+        .nav-btn[data-style="9"] { background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; }
+        .nav-btn[data-style="10"] { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #e17055; }
+
+        .style-section-fix {
+            display: none;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+        .style-section-fix { display: block; }
+        .style-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #eee;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .style-info h2 { font-size: 22px; margin-bottom: 5px; }
+        .style-info p { font-size: 14px; color: #888; }
+
+        .copy-btn {
+            margin-left: auto;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .copy-btn:hover { background: #555; transform: translateY(-2px); }
+
+        .preview-box {
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafafa;
+        }
+
+        .style-1 .style-number { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .style-1 .style-info h2 { color: #1a1a2e; }
+        .style-2 .style-number { background: linear-gradient(135deg, #81c784, #4caf50); }
+        .style-2 .style-info h2 { color: #2e7d32; }
+        .style-3 .style-number { background: linear-gradient(135deg, #ff6b6b, #feca57); }
+        .style-3 .style-info h2 { color: #e74c3c; }
+        .style-4 .style-number { background: linear-gradient(135deg, #2c3e50, #d4af37); }
+        .style-4 .style-info h2 { color: #2c3e50; }
+        .style-5 .style-number { background: linear-gradient(135deg, #8b4513, #d2691e); }
+        .style-5 .style-info h2 { color: #8b4513; }
+        .style-6 .style-number { background: linear-gradient(135deg, #0f0c29, #302b63); }
+        .style-6 .style-info h2 { color: #302b63; }
+        .style-7 .style-number { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+        .style-7 .style-info h2 { color: #d63031; }
+        .style-8 .style-number { background: linear-gradient(135deg, #2d3436, #636e72); }
+        .style-8 .style-info h2 { color: #2d3436; }
+        .style-9 .style-number { background: linear-gradient(135deg, #134e5e, #71b280); }
+        .style-9 .style-info h2 { color: #134e5e; }
+        .style-10 .style-number { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #e17055; }
+        .style-10 .style-info h2 { color: #e17055; }
+
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+        }
+        .usage-guide {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+        .usage-guide h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .usage-guide ol {
+            padding-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+        .usage-guide li {
+            margin-bottom: 10px;
+        }
+    
+        /* 强制显示所有内容 */
+        .style-section { display: block !important; }
+        .copy-btn { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="style-section style-7" id="style-7">
+            
+            <div class="style-header">
+                <div class="style-number">7</div>
+                <div class="style-info">
+                    <h2>温柔治愈</h2>
+                    <p>适合情感类、心理内容，温暖柔和，给人心灵慰藉</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(7)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-7">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(180deg, #fff9f0 0%, #ffecd2 100%); padding: 50px 30px; border-radius: 24px; text-align: center; margin-bottom: 30px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 20px; left: 30px; font-size: 24px; opacity: 0.3;">☁️</div>
+                    <div style="position: absolute; top: 40px; right: 40px; font-size: 20px; opacity: 0.3;">✨</div>
+                    <div style="position: absolute; bottom: 30px; left: 50px; font-size: 18px; opacity: 0.3;">🌙</div>
+                    <div style="font-size: 14px; color: #e17055; letter-spacing: 4px; margin-bottom: 20px;">✿ 温暖陪伴 ✿</div>
+                    <h1 style="font-size: 30px; color: #d63031; font-weight: 400; margin: 0; line-height: 1.4;">给疲惫的你<br>一个温柔的拥抱</h1>
+                    <div style="margin-top: 25px;">
+                        <span style="display: inline-block; background: linear-gradient(135deg, #fdcb6e, #e17055); color: #fff; padding: 10px 25px; border-radius: 25px; font-size: 13px;">🌸 你值得被温柔以待</span>
+                    </div>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #fff9f0; border-radius: 16px; padding: 25px 30px; margin-bottom: 30px; text-align: center;">
+                    <p style="font-size: 15px; color: #d63031; line-height: 2; margin: 0;">
+                        "无论今天过得怎样，<br>请记得对自己说一句：辛苦了，你做得很好。"
+                    </p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 35px 0; text-align: center;">
+                    <h2 style="font-size: 22px; color: #d63031; font-weight: 400; margin: 0;">🌷 接纳不完美的自己</h2>
+                    <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #fdcb6e, #e17055); margin: 15px auto; border-radius: 2px;"></div>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 25px 0;">
+                    <h3 style="font-size: 17px; color: #e17055; font-weight: 500; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 20px;">💭</span>
+                        <span>允许自己脆弱</span>
+                    </h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; color: #555; line-height: 2.2; text-align: justify; margin: 0 0 18px 0; text-indent: 2em;">
+                        生活总是充满了各种压力和期待。我们常常要求自己坚强、完美、无所不能。但其实，脆弱并不可耻，流泪并不代表软弱。每个人都需要一个可以卸下防备的角落，给自己一个喘息的机会。
+                    </p>
+                    <p style="font-size: 15px; color: #555; line-height: 2.2; text-align: justify; margin: 0; text-indent: 2em;">
+                        请相信，你的感受是真实的，你的努力是被看见的。即使今天没有完成所有计划，即使偶尔想要放弃，你也依然是那个值得被爱的人。
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: linear-gradient(135deg, #fff9f0, #ffecd2); padding: 30px; border-radius: 20px; margin: 30px 0; text-align: center; position: relative;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🌻</div>
+                    <p style="font-size: 16px; color: #d63031; line-height: 2; margin: 0;">
+                        "你不必成为太阳，<br>做一颗温柔的星星也很好，<br>在自己的角落里静静发光。"
+                    </p>
+                </div>
+
+                <!-- 多图排版 - 双图 -->
+                <div style="margin: 25px 0;">
+                    <div style="display: flex; gap: 15px;">
+                        <div style="flex: 1;">
+                            <img src="http://localhost:8088/assets/healing-flower.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px;">
+                            <p style="font-size: 13px; color: #e17055; margin: 12px 0 0 0; text-align: center;">🌸 花开有时</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="http://localhost:8088/assets/healing-nature.jpg" style="width: 100%; height: 180px; object-fit: cover; border-radius: 16px;">
+                            <p style="font-size: 13px; color: #e17055; margin: 12px 0 0 0; text-align: center;">☕ 温暖时光</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 时间轴 -->
+                <div style="margin: 35px 0;">
+                    <h3 style="font-size: 17px; color: #d63031; font-weight: 500; margin: 0 0 25px 0; text-align: center;">🌈 自我疗愈之旅</h3>
+                    <div style="position: relative; padding: 0 20px;">
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="background: #fff9f0; padding: 20px; border-radius: 16px; display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #fdcb6e, #e17055); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">🌅</div>
+                                <div>
+                                    <div style="font-size: 15px; color: #d63031; font-weight: 500; margin-bottom: 5px;">晨间冥想</div>
+                                    <div style="font-size: 13px; color: #888; line-height: 1.6;">用10分钟与自己对话，开启平和的一天</div>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #fff9f0; padding: 20px; border-radius: 16px; display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #fdcb6e, #e17055); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">📝</div>
+                                <div>
+                                    <div style="font-size: 15px; color: #d63031; font-weight: 500; margin-bottom: 5px;">感恩日记</div>
+                                    <div style="font-size: 13px; color: #888; line-height: 1.6;">记录3件今天值得感恩的小事</div>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #fff9f0; padding: 20px; border-radius: 16px; display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #fdcb6e, #e17055); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;">🌙</div>
+                                <div>
+                                    <div style="font-size: 15px; color: #d63031; font-weight: 500; margin-bottom: 5px;">睡前放松</div>
+                                    <div style="font-size: 13px; color: #888; line-height: 1.6;">放下手机，听一段舒缓的音乐入眠</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A问答 -->
+                <div style="margin: 30px 0;">
+                    <h3 style="font-size: 17px; color: #d63031; font-weight: 500; margin: 0 0 20px 0; text-align: center;">💌 心灵问答</h3>
+                    
+                    <div style="background: #fff9f0; border-radius: 16px; padding: 25px; margin-bottom: 15px;">
+                        <div style="font-size: 15px; color: #e17055; font-weight: 500; margin-bottom: 12px;">Q：总是感到焦虑怎么办？</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.9; padding-left: 20px; border-left: 3px solid #fdcb6e;">
+                            试着深呼吸，告诉自己"我在这里，我是安全的"。焦虑是一种正常的情绪，接纳它，然后温柔地把自己带回当下。
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff9f0; border-radius: 16px; padding: 25px;">
+                        <div style="font-size: 15px; color: #e17055; font-weight: 500; margin-bottom: 12px;">Q：如何建立自信？</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.9; padding-left: 20px; border-left: 3px solid #fdcb6e;">
+                            每天对自己说一句肯定的话，记录自己的小成就。自信不是一蹴而就的，而是在一次次自我肯定中慢慢积累的。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作者卡片 -->
+                <div style="background: linear-gradient(135deg, #fff9f0, #ffecd2); padding: 30px; border-radius: 20px; margin: 35px 0; text-align: center;">
+                    <img src="http://localhost:8088/assets/1438761681033-6461ffad8d80.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 15px rgba(225,112,85,0.2); margin-bottom: 15px;">
+                    <div style="font-size: 18px; color: #d63031; margin-bottom: 8px;">温暖小太阳 ☀️</div>
+                    <div style="font-size: 13px; color: #e17055; margin-bottom: 12px;">心理咨询师 | 治愈系写作者</div>
+                    <div style="font-size: 14px; color: #666; line-height: 1.9; max-width: 400px; margin: 0 auto;">
+                        愿我的文字能成为你疲惫时的港湾，<br>陪你度过每一个需要温暖的时刻。
+                    </div>
+                </div>
+
+                <!-- 底部引导 -->
+                <div style="background: linear-gradient(135deg, #fdcb6e, #e17055); padding: 35px; border-radius: 20px; text-align: center; margin-top: 35px;">
+                    <p style="font-size: 16px; color: #fff; margin: 0 0 20px 0;">记得对自己好一点 💝</p>
+                    <div style="display: flex; justify-content: center; gap: 30px; align-items: center;">
+                        <span style="font-size: 24px;">🤗</span>
+                        <span style="font-size: 24px;">💕</span>
+                        <span style="font-size: 24px;">✨</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风格8: 杂志编辑 -->
+        
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风格3: 活力创意</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #fff;
+            padding: 20px;
+            max-width: 677px;
+            margin: 0 auto;
+        }
+        .style-header {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        .style-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        .style-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .style-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        .content {
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="style-header">
+        <div class="style-number">3</div>
+        <div class="style-title">活力创意</div>
+        <div class="style-desc">适合年轻品牌、活动推广，色彩鲜明，充满活力</div>
+    </div>
+    <div class="content">
+        
+            <div class="style-header">
+                <div class="style-number">3</div>
+                <div class="style-info">
+                    <h2>活力创意</h2>
+                    <p>适合年轻品牌、创意内容，色彩鲜明，充满活力与趣味</p>
+                </div>
+                <button class="copy-btn" onclick="copyStyle(3)">复制全部代码</button>
+            </div>
+            <div class="preview-box" id="preview-3">
+                <!-- 头图Banner -->
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%); padding: 50px 30px; border-radius: 20px; text-align: center; margin-bottom: 30px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: rgba(255,255,255,0.3); border-radius: 50%;"></div>
+                    <div style="position: absolute; bottom: 30px; right: 30px; width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
+                    <div style="position: absolute; top: 50%; left: 10%; width: 20px; height: 20px; background: rgba(255,255,255,0.4); border-radius: 50%;"></div>
+                    <div style="font-size: 14px; color: #fff; letter-spacing: 4px; margin-bottom: 15px; text-transform: uppercase; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">✨ CREATIVE ZONE ✨</div>
+                    <h1 style="font-size: 36px; color: #fff; font-weight: 800; margin: 0; line-height: 1.3; text-shadow: 0 2px 10px rgba(0,0,0,0.1);"> unleash<br>你的创意潜能</h1>
+                    <div style="margin-top: 25px;">
+                        <span style="display: inline-block; background: #fff; color: #ff6b6b; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600;">🚀 创意无极限</span>
+                    </div>
+                </div>
+
+                <!-- 导语 -->
+                <div style="background: #fff9e6; border: 2px dashed #feca57; padding: 25px; border-radius: 16px; margin-bottom: 30px;">
+                    <p style="font-size: 15px; color: #e67700; line-height: 1.8; margin: 0; text-align: center;">
+                        💡 创意不是天赋，而是一种可以训练的能力！今天，让我们一起打破思维定式，释放内心的创造力。
+                    </p>
+                </div>
+
+                <!-- 一级标题 -->
+                <div style="margin: 30px 0; text-align: center;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6b6b, #feca57); padding: 15px 40px; border-radius: 30px;">
+                        <h2 style="font-size: 22px; color: #fff; font-weight: 700; margin: 0;">🎯 创意激发指南</h2>
+                    </div>
+                </div>
+
+                <!-- 二级标题 -->
+                <div style="margin: 25px 0;">
+                    <h3 style="font-size: 18px; color: #ff6b6b; font-weight: 700; margin: 0 0 15px 0; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;">🔥</span>
+                        <span>打破常规思维</span>
+                    </h3>
+                </div>
+
+                <!-- 正文段落 -->
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; color: #444; line-height: 2; text-align: justify; margin: 0 0 16px 0; text-indent: 2em;">
+                        创意来源于对常规的挑战。当我们敢于质疑"一直以来都是这样"的时候，新的可能性就会涌现。试着问自己：如果反过来会怎样？如果放大100倍会怎样？如果完全删除这个环节会怎样？
+                    </p>
+                    <p style="font-size: 15px; color: #444; line-height: 2; text-align: justify; margin: 0; text-indent: 2em;">
+                        记住，没有糟糕的想法，只有尚未打磨的创意种子。大胆地记录下来，然后在其中寻找闪光点！
+                    </p>
+                </div>
+
+                <!-- 引用块 -->
+                <div style="background: linear-gradient(135deg, #ff6b6b, #feca57); padding: 25px; border-radius: 16px; margin: 25px 0; text-align: center;">
+                    <p style="font-size: 18px; color: #fff; line-height: 1.8; margin: 0; font-weight: 600;">
+                        "创造力就是允许自己犯错。<br>艺术就是知道该保留哪一个错误。"
+                    </p>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.9); margin: 15px 0 0 0;">— 斯科特·亚当斯</p>
+                </div>
+
+                <!-- 多图排版 - 双图 -->
+                <div style="margin: 25px 0;">
+                    <div style="display: flex; gap: 15px;">
+                        <div style="flex: 1; background: #fff; padding: 15px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                            <img src="../assets/new-03-creative.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px;">
+                            <p style="font-size: 13px; color: #e74c3c; margin: 10px 0 0 0; text-align: center;">🎨 色彩实验</p>
+                        </div>
+                        <div style="flex: 1; background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                            <img src="../assets/1513364776144-60967b0f800f.jpg" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px;">
+                            <p style="font-size: 13px; color: #e74c3c; margin: 10px 0 0 0; text-align: center;">✏️ 头脑风暴</p>
+                        
+    </div>
+</body>
+</html>
