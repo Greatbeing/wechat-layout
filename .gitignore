@@ -18,3 +18,14 @@ build/
 # Temp
 *.tmp
 *.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# PDF exports
+pdfs/
+*.pdf

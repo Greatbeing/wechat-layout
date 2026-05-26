@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信公众号排版组件库（微信兼容版）</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #f5f5f5; }
+        .preview-container { max-width: 677px; margin: 0 auto; background: #fff; }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+
+<!-- ========== 组件1: 标题样式 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件1: 标题样式
+    </h3>
+</section>
+
+<!-- 标题类型A: 居中标题 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <h1 style="font-size:24px;font-weight:bold;color:#1a1a1a;text-align:center;letter-spacing:2px;margin:30px 0 20px 0;line-height:1.4;">
+        居中标题 · 简洁有力
+    </h1>
+    <p style="text-align:center;margin:0 0 30px 0;">
+        <span style="display:inline-block;width:40px;height:2px;background:#1a1a1a;"></span>
+    </p>
+</section>
+
+<!-- 标题类型B: 左侧竖线标题 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <h2 style="font-size:18px;font-weight:bold;color:#1a1a1a;margin:30px 0 15px 0;padding-left:12px;border-left:3px solid #e94560;line-height:1.4;">
+        左侧竖线标题
+    </h2>
+</section>
+
+<!-- 标题类型C: 上下装饰标题 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="text-align:center;margin:30px 0 10px 0;">
+        <span style="color:#c4a35a;font-size:14px;letter-spacing:6px;">◆ ── ◆ ── ◆</span>
+    </p>
+    <h2 style="font-size:18px;font-weight:bold;color:#c4a35a;text-align:center;letter-spacing:3px;margin:0 0 10px 0;">
+        装饰线标题
+    </h2>
+    <p style="text-align:center;margin:0 0 30px 0;">
+        <span style="color:#c4a35a;font-size:14px;letter-spacing:6px;">◆ ── ◆ ── ◆</span>
+    </p>
+</section>
+
+<!-- 标题类型D: Emoji装饰标题 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <h2 style="font-size:18px;font-weight:normal;color:#2e7d32;text-align:center;letter-spacing:2px;margin:30px 0 20px 0;">
+        🌿 清新文艺标题
+    </h2>
+</section>
+
+<!-- ========== 组件2: 引用块 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件2: 引用块
+    </h3>
+</section>
+
+<!-- 引用块类型A: 左侧竖线 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <blockquote style="margin:20px 0;padding:16px 20px;background:#f5f5f5;border-left:3px solid #999;">
+        <p style="font-size:14px;color:#555;line-height:1.8;margin:0;">
+            引用内容，用于强调重要观点。简洁的左侧竖线设计。
+        </p>
+    </blockquote>
+</section>
+
+<!-- 引用块类型B: 居中引用 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <blockquote style="margin:20px 0;padding:20px 24px;background:#f8f8f8;text-align:center;">
+        <p style="font-size:15px;color:#555;line-height:1.9;margin:0;font-style:italic;">
+            「引用内容，可以用来强调重要观点或名人名言。」
+        </p>
+    </blockquote>
+</section>
+
+<!-- 引用块类型C: 金色强调 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <blockquote style="margin:20px 0;padding:20px 24px;background:#f5f5f0;border-radius:8px;border:1px solid #c4a35a;">
+        <p style="font-size:14px;color:#5a5a5a;line-height:1.9;margin:0;text-align:center;font-style:italic;">
+            「高端知识风格引用 · 金色边框强调」
+        </p>
+    </blockquote>
+</section>
+
+<!-- ========== 组件3: 列表样式 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件3: 列表样式
+    </h3>
+</section>
+
+<!-- 列表类型A: 圆点列表 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <ul style="margin:20px 0;padding-left:0;list-style-type:none;">
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#888;">·</span>列表项一 · 简洁明了
+        </li>
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#888;">·</span>列表项二 · 保持一致
+        </li>
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#888;">·</span>列表项三 · 层次清晰
+        </li>
+    </ul>
+</section>
+
+<!-- 列表类型B: 序号列表 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <ol style="margin:20px 0;padding-left:24px;list-style-type:none;">
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 14px 0;">
+            <span style="display:inline-block;width:22px;height:22px;background:#1a1a2e;color:#fff;text-align:center;line-height:22px;font-size:12px;margin-right:10px;border-radius:2px;">1</span>
+            序号列表项一
+        </li>
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 14px 0;">
+            <span style="display:inline-block;width:22px;height:22px;background:#1a1a2e;color:#fff;text-align:center;line-height:22px;font-size:12px;margin-right:10px;border-radius:2px;">2</span>
+            序号列表项二
+        </li>
+        <li style="font-size:15px;color:#333;line-height:1.8;margin:0 0 14px 0;">
+            <span style="display:inline-block;width:22px;height:22px;background:#1a1a2e;color:#fff;text-align:center;line-height:22px;font-size:12px;margin-right:10px;border-radius:2px;">3</span>
+            序号列表项三
+        </li>
+    </ol>
+</section>
+
+<!-- 列表类型C: 菱形列表 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <ul style="margin:20px 0;padding-left:0;list-style-type:none;">
+        <li style="font-size:14px;color:#333;line-height:1.9;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#c4a35a;">◆</span>高端知识风格列表
+        </li>
+        <li style="font-size:14px;color:#333;line-height:1.9;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#c4a35a;">◆</span>使用菱形符号
+        </li>
+        <li style="font-size:14px;color:#333;line-height:1.9;margin:0 0 12px 0;padding-left:20px;position:relative;">
+            <span style="position:absolute;left:0;color:#c4a35a;">◆</span>金色强调色
+        </li>
+    </ul>
+</section>
+
+<!-- ========== 组件4: 分割线 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件4: 分割线
+    </h3>
+</section>
+
+<!-- 分割线类型A: 中心圆点 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="text-align:center;margin:30px 0;">
+        <span style="display:inline-block;width:8px;height:8px;background:#d0d0d0;border-radius:50%;"></span>
+        <span style="display:inline-block;width:8px;height:8px;background:#d0d0d0;border-radius:50%;margin:0 8px;"></span>
+        <span style="display:inline-block;width:8px;height:8px;background:#d0d0d0;border-radius:50%;"></span>
+    </p>
+</section>
+
+<!-- 分割线类型B: 虚线 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="border-top:1px dashed #d0d8e4;margin:30px 0;"></p>
+</section>
+
+<!-- 分割线类型C: 菱形装饰 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="text-align:center;margin:30px 0;">
+        <span style="color:#c4a35a;font-size:14px;letter-spacing:6px;">◆ ── ◆ ── ◆</span>
+    </p>
+</section>
+
+<!-- ========== 组件5: 人物卡片 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件5: 人物卡片
+    </h3>
+</section>
+
+<!-- 人物卡片 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <div style="margin:20px 0;padding:24px;background:#fff;border:1px solid #c4a35a;border-radius:8px;text-align:center;">
+        <p style="margin:0 0 16px 0;">
+            <img src="../assets/1534528741775-53994a69daeb.jpg" alt="头像" style="width:80px;height:80px;border-radius:50%;border:3px solid #c4a35a;" />
+        </p>
+        <p style="font-size:16px;font-weight:bold;color:#3d3d3d;margin:0 0 8px 0;">人物姓名</p>
+        <p style="font-size:12px;color:#888;margin:0 0 12px 0;">身份标签 · 职业描述</p>
+        <p style="font-size:13px;color:#666;line-height:1.8;margin:0;">人物简介描述，可以是一段关于这个人物的简短介绍。</p>
+    </div>
+</section>
+
+<!-- ========== 组件6: 信息卡片 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件6: 信息卡片
+    </h3>
+</section>
+
+<!-- 信息卡片 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <div style="margin:20px 0;padding:20px;background:#f5f7fa;border-radius:8px;">
+        <p style="font-size:14px;color:#555;line-height:1.8;margin:0;">
+            <strong style="color:#1a1a2e;">💡 提示：</strong>这是一条信息提示卡片，可用于重要信息展示。
+        </p>
+    </div>
+</section>
+
+<!-- ========== 组件7: 关键词高亮 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件7: 关键词高亮
+    </h3>
+</section>
+
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="font-size:15px;color:#333;line-height:2;margin:20px 0;">
+        这是一段包含<span style="background:#fff3cd;padding:2px 6px;border-radius:4px;color:#c4a35a;font-weight:bold;">高亮标注</span>的文本，用于强调关键词或重要概念。也可以使用<span style="background:#e8f5e9;padding:2px 6px;border-radius:4px;color:#2e7d32;font-weight:bold;">绿色高亮</span>表示正面内容。
+    </p>
+</section>
+
+<!-- ========== 组件8: 图片展示 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件8: 图片展示
+    </h3>
+</section>
+
+<!-- 图片展示 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <p style="text-align:center;margin:20px 0;">
+        <img src="../assets/1506905925346-21bda4d32df4.jpg" alt="风景图片" style="max-width:100%;border-radius:8px;" />
+    </p>
+    <p style="font-size:12px;color:#999;text-align:center;margin:0 0 30px 0;">
+        图片说明文字 · 可以是图片的来源或描述
+    </p>
+</section>
+
+<!-- ========== 组件9: 结束语 ========== -->
+<section style="margin:0 auto;max-width:677px;">
+    <h3 style="font-size:16px;color:#888;margin:30px 0 15px 0;padding-left:15px;border-left:3px solid #ccc;">
+        组件9: 结束语
+    </h3>
+</section>
+
+<!-- 结束语 -->
+<section style="margin:0 auto;max-width:677px;padding:0 15px;">
+    <blockquote style="margin:20px 0;padding:24px;background:#f8f8f8;text-align:center;">
+        <p style="font-size:13px;color:#888;line-height:1.9;margin:0;letter-spacing:1px;">
+            END · 结语<br/>
+            <span style="font-size:12px;">感谢阅读 · 期待交流</span>
+        </p>
+    </blockquote>
+</section>
+
+<!-- 底部留白 -->
+<section style="margin:0 auto;max-width:677px;">
+    <p style="height:40px;"></p>
+</section>
+
+    </div>
+</body>
+</html>
